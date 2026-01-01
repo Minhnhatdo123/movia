@@ -1,9 +1,17 @@
 {
   "scripts": {
-    "minify" : "terser movia.js -o movia.min.js && csso movia.css -o movia.min.css"
+    "minify": "terser movia.js -o movia.min.js && csso movia.css -o movia.min.css"
   },
   "dependencies": {
     "csso-cli": "^4.0.2",
     "terser": "^5.44.1"
-  }
+  },
+  "name": "library",
+  "version": "1.0.0",
+  "main": "movia.js",
+  "devDependencies": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
 }
