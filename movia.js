@@ -7,9 +7,6 @@ function getTopMovia() {
     return moviaStack[moviaStack.length - 1] || null;
 }
 
-export const $ = document.querySelector.bind(document);
-export const $$ = document.querySelectorAll.bind(document);
-
 export const MoviaGlobal ={
     defaultCloseMethods : ['button','overlay','escape'],
     defaultCssClass: [],
@@ -58,7 +55,6 @@ export class Movia {
         this._pendingFooterContent = null; // Nội dung chân trang có thể thêm
         this._footerInitialized = false; // Footer đã được render từ dữ liệu được truyền vào hay chưa
         
-
         this._keydownHandler = null; // Hành vi xử lý
         this._childMovias = []; // List movia
 
