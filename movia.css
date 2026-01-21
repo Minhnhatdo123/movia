@@ -1,4 +1,4 @@
-.movia-backdrop{
+.movia{
     position: fixed;
     inset: 0;
     display: flex;
@@ -13,17 +13,17 @@
     z-index: 1000;
 }
 
-.movia-backdrop.show{
+.movia--show{
     opacity: 1;
     visibility: visible;
     pointer-events: auto; /* Nhận các sự kiện event*/
 }
 
-.movia-backdrop.show .movia-container{
+.movia--show .movia__container{
     transform: scale(1);
 }
 
-.movia-container{
+.movia__container{
     position: relative;
     width: min(600px, 90%);
     max-height: 90%;
@@ -35,7 +35,7 @@
     transition: transform .3s;
 }
 
-.movia-close{
+.movia__close{
     position: absolute;
     top: 12px;
     right: 12px;
@@ -45,46 +45,29 @@
     background: #ebebeb;
     font-size: 2rem;
     cursor: pointer;
+    border: none;
+    outline: none;
 }
 
-.movia-close:hover{
-    color: #fff;
+.movia__close:hover{
+    color: #333;
     background: red
 }
 
-/* Template 3 */
-#movia-3 .movia-title{
-    margin: 0 0 10px 0;
-    font-size: 2.5rem;
-    font-weight: 600;
-}
-#movia-3 .movia-body{
-   margin:20px 0;
-   border-top: 2px solid #999;
-   border-bottom: 2px solid #999;
-   padding: 20px 0;
-}
-#movia-3 .text-notification{
-    margin-bottom: 15px;
-    font-size: 1.8rem;
-}
-#movia-3 .text-secondary {
-    color: #6C757D;
-    font-size: 1.4rem;
-}
 
 /* Footer */
+.movia__content{
+    max-height: 80vh;
+    overflow-y: auto;
+}
 
-.movia-footer{
+.movia__footer{
     display: flex;
     justify-content: flex-end;
-    gap:10px
+    gap:10px;
+    padding-top: 20px;
 }
 
-.movia-footer button:hover{
-    opacity: 0.8;
-}
-
-.no-scroll{
+.movia--no-scroll{
     overflow: hidden;
 }
