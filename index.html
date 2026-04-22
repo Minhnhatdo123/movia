@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./login.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <main>
+        <button data-open-movia="movia-1" class="btn">Open Movia </button>
+        <button data-open-movia="movia-2" class="btn">Open Movia 2</button>
+        <button data-open-movia="movia-3" class="btn">Open Movia 3</button>
+        
+    </main>
+            <!-- Movia -->
+            
+        <!--<div id="movia-1" class="movia-backdrop ">
+                <div class="movia-container">
+                    <button id="movia-close" class="movia-close">&times;</button>
+                    <div class="movia-content">
+                        .....
+                    </div>
+                    <div class="movia-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="movia">Close</button>
+                        <button type="button" class="btn btn-primary" id="savePackageChangesBtn">Save changes</button>
+                      </div>
+                </div>
+            </div>
+        */  -->
+
+        <!-- Content Movia -->
+    <template id="movia-1">
+        <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, iusto. </h1>
+        <button type="button" data-open-movia="movia-2" id="open-movia-2" class="btn" >Open Movia 2</button>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+        <img src="https://images.unsplash.com/photo-1471899236350-e3016bf1e69e?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+        width="100%" alt="" />
+    </template> 
+
+     <template id="movia-2">
+        <h1 id="login-title">Login</h1>        
+        <p class="lead">Đăng nhập bằng email của bạn</p>
+        <button type="button" data-open-movia="movia-3" class="btn">Open Movia 3</button>
+        <form id="loginForm">
+            <div class="field">
+                <label for="email">Email</label>
+                <input id="email" type="email" name="email" inputmode="email" autocomplete="email" required
+                placeholder="User Name">                
+            </div>
+            <div class="field password-wrapper">
+                <label for="password">Password</label>
+                <input id="password" name="password" type="password" autocomplete="current-password" required
+                    minlength="6" placeholder="••••••••" />
+                <button type="button" class="toggle-pass" id="togglePass" aria-label="Hiện mật khẩu">Hiện</button>
+            </div>
+            <button type="submit" class="primary">Đăng nhập</button>
+        </form>
+    </template>
+
+    <template id="movia-3">
+        <h5 class="movia-title">Confirmation</h5>
+        <div class="movia-body">
+            <p class="text-notification">Do you want to save changes to this document before closing?</p>
+            <p class="text-secondary">If you don't save, your changes will be lost.</p>
+        </div>
+         <!-- <div class="movia-footer">
+            <button type="button" class="button btn-cancel" >Cancel</button>
+            <button type="button" class="button btn-confirm">Save changes</button>
+        </div>   -->
+    </template>    
+    
+    <script src="https://cdn.jsdelivr.net/npm/dompurify@3.4.0/dist/purify.min.js"></script>
+   <script type="module" src="./main.js"></script>
+</body>
+</html>

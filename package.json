@@ -1,0 +1,19 @@
+{
+  "name": "modal",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:js": "terser movia.js -o dist/movia.min.js -c -m",
+    "build:css": "cleancss -o dist/movia.min.css style.css",
+    "build": "npm run build:js && npm run build:css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "clean-css-cli": "^5.6.3",
+    "terser": "^5.46.1"
+  }
+}
